@@ -1,6 +1,6 @@
-# Gestor de Clientes - Sistema de Gestión para Gimnasio
+# Gestor de Clientes - Sistema de Gestión
 
-Sistema de gestión de clientes desarrollado con **Avalonia UI** y **.NET 8.0** para administrar clientes, pagos, membresías y recordatorios de un gimnasio.
+Sistema de gestión de clientes desarrollado con **Avalonia UI** y **.NET 8.0** para administrar clientes, pagos, membresías y recordatorios.
 
 ## 📋 Tabla de Contenidos
 
@@ -8,7 +8,10 @@ Sistema de gestión de clientes desarrollado con **Avalonia UI** y **.NET 8.0** 
 - [Primera Configuración](#primera-configuración)
 - [Funcionalidades](#funcionalidades)
 - [Flujo de Trabajo](#flujo-de-trabajo)
+- [Línea de Comandos](#línea-de-comandos)
 - [Requisitos del Sistema](#requisitos-del-sistema)
+- [Tecnologías Utilizadas](#tecnologías-utilizadas)
+- [Desarrollo](#desarrollo)
 
 ---
 
@@ -24,7 +27,7 @@ Sistema de gestión de clientes desarrollado con **Avalonia UI** y **.NET 8.0** 
 
 1. **Descargar la aplicación**
    - Obtener el ejecutable desde la carpeta `bin/Release/net8.0/` o `publish/portable/`
-   - El archivo principal es `GimnasioApp.exe` (o `GestorClientes.exe` según la configuración)
+   - El archivo principal es `GestorClientes.exe`
 
 2. **Ejecutar la aplicación**
    - Hacer doble clic en el ejecutable
@@ -33,8 +36,24 @@ Sistema de gestión de clientes desarrollado con **Avalonia UI** y **.NET 8.0** 
 3. **Inicializar la base de datos (opcional)**
    - Si necesitas ejecutar solo la migración de la base de datos:
      ```bash
-     GimnasioApp.exe --migrate
+     GestorClientes.exe --migrate
+     # O usando la forma corta:
+     GestorClientes.exe --migrar
+     # O usando el alias:
+     GestorClientes.exe -m
      ```
+
+### Versión Portátil (Self-Contained)
+
+La aplicación también está disponible en versión **portátil** (self-contained) que incluye todas las dependencias:
+
+- **Ubicación:** `publish/portable/`
+- **Ventajas:**
+  - No requiere .NET Runtime instalado en el sistema
+  - Funciona en cualquier Windows 10+ (x64) sin dependencias adicionales
+  - Completamente portable (puede ejecutarse desde USB)
+- **Tamaño:** ~100-150 MB (incluye .NET Runtime completo)
+- **Uso:** Ejecutar `GestorClientes.exe` directamente desde la carpeta
 
 ---
 
@@ -61,14 +80,26 @@ Si tienes un archivo `CLIENTES.ods` (formato OpenDocument Spreadsheet), puedes i
 
 ```bash
 # Importar sin limpiar datos existentes
-GimnasioApp.exe --importar
+GestorClientes.exe --importar
+# O usando la forma corta:
+GestorClientes.exe -i
 
 # Importar limpiando todos los datos existentes
-GimnasioApp.exe --importar --limpiar
+GestorClientes.exe --importar --limpiar
+# O usando formas cortas:
+GestorClientes.exe -i -l
+GestorClientes.exe --importar -l
 
 # Importar desde una ruta específica
-GimnasioApp.exe --importar "C:\ruta\al\archivo.ods"
+GestorClientes.exe --importar "C:\ruta\al\archivo.ods"
+GestorClientes.exe -i "C:\ruta\al\archivo.ods"
+
+# Importar sin confirmación (útil para scripts)
+GestorClientes.exe --importar --limpiar --sin-confirmar
+GestorClientes.exe -i -l -y
 ```
+
+**Nota:** El archivo `CLIENTES.ods` debe estar en el mismo directorio que el ejecutable, o puedes especificar la ruta completa.
 
 ### 4. Poblar con Datos de Prueba (Opcional)
 
@@ -76,10 +107,18 @@ Para probar la aplicación con datos ficticios:
 
 ```bash
 # Poblar sin limpiar datos existentes
-GimnasioApp.exe --poblar
+GestorClientes.exe --poblar
+# O usando formas cortas:
+GestorClientes.exe --poblar-datos
+GestorClientes.exe -p
 
 # Poblar limpiando todos los datos existentes
-GimnasioApp.exe --poblar --limpiar
+GestorClientes.exe --poblar --limpiar
+GestorClientes.exe -p -l
+
+# Poblar sin confirmación (útil para scripts)
+GestorClientes.exe --poblar --limpiar --sin-confirmar
+GestorClientes.exe -p -l -y
 ```
 
 ---
@@ -218,6 +257,47 @@ Gestión completa de copias de seguridad:
 
 ---
 
+## 💻 Línea de Comandos
+
+La aplicación soporta varios argumentos de línea de comandos para operaciones sin interfaz gráfica:
+
+### Argumentos Disponibles
+
+| Argumento | Forma Corta | Descripción |
+|-----------|-------------|-------------|
+| `--migrate` | `-m` o `--migrar` | Ejecuta solo la migración de la base de datos y sale |
+| `--importar` | `-i` | Importa clientes desde archivo ODS |
+| `--poblar` | `-p` o `--poblar-datos` | Pobla la base de datos con datos ficticios |
+| `--limpiar` | `-l` | Limpia todos los datos antes de importar/poblar |
+| `--sin-confirmar` | `-y` | Omite la confirmación (útil para scripts) |
+
+### Ejemplos de Uso
+
+```bash
+# Migrar base de datos
+GestorClientes.exe --migrate
+
+# Importar clientes con confirmación
+GestorClientes.exe --importar --limpiar
+
+# Importar sin confirmación (para automatización)
+GestorClientes.exe -i -l -y
+
+# Poblar datos de prueba
+GestorClientes.exe --poblar
+
+# Importar desde ruta específica
+GestorClientes.exe --importar "C:\datos\clientes.ods"
+```
+
+### Logs
+
+Las operaciones de línea de comandos generan logs:
+- **Importación:** `importacion_log.txt` en el directorio de la aplicación
+- **Errores:** `error_log.txt` en el directorio de la aplicación
+
+---
+
 ## 🔄 Flujo de Trabajo
 
 ### Flujo Diario Típico
@@ -260,7 +340,7 @@ Gestión completa de copias de seguridad:
 
 ### Flujo para Nuevo Cliente
 
-1. Cliente llega al gimnasio
+1. Nuevo cliente se registra
 2. **Agregar Cliente:**
    - Nombre, apellidos, teléfono
    - Fecha de alta (automática)
@@ -351,6 +431,32 @@ Gestión completa de copias de seguridad:
 
 ---
 
+## 🛠️ Tecnologías Utilizadas
+
+### Framework y UI
+- **.NET 8.0** - Framework de desarrollo
+- **Avalonia UI 11.3.10** - Framework de interfaz gráfica multiplataforma
+- **Huskui.Avalonia 0.10.1** - Tema de UI moderno
+
+### Base de Datos
+- **SQLite** (System.Data.SQLite.Core 1.0.119) - Base de datos local embebida
+
+### Seguridad
+- **BCrypt.Net-Next 4.0.3** - Encriptación de contraseñas
+
+### Exportación
+- **EPPlus 7.0.0** - Generación de archivos Excel (.xlsx)
+
+### Características
+- ✅ Interfaz moderna con tema Fluent
+- ✅ Base de datos local (sin servidor requerido)
+- ✅ Exportación a Excel
+- ✅ Sistema de autenticación seguro
+- ✅ Backups automáticos
+- ✅ Logs de errores y operaciones
+
+---
+
 ## 📝 Notas Adicionales
 
 ### Base de Datos
@@ -395,5 +501,68 @@ Para problemas o consultas, revisar:
 
 ---
 
+## 👨‍💻 Desarrollo
+
+### Requisitos para Desarrollo
+
+- **.NET 8.0 SDK** (no solo Runtime)
+- **Visual Studio 2022** o **JetBrains Rider** o **VS Code**
+- **Windows 10/11** (64-bit)
+
+### Compilar el Proyecto
+
+```bash
+# Restaurar dependencias
+dotnet restore
+
+# Compilar en modo Debug
+dotnet build
+
+# Compilar en modo Release
+dotnet build -c Release
+
+# Ejecutar la aplicación
+dotnet run
+
+# Publicar versión portable (self-contained)
+dotnet publish -c Release -r win-x64 --self-contained true -p:PublishSingleFile=false
+```
+
+### Estructura del Proyecto
+
+```
+sistema_gestion_clientes_windows/
+├── Data/              # Repositorios y contexto de base de datos
+├── Models/            # Modelos de datos (Cliente, Pago, Usuario)
+├── Services/          # Servicios de negocio
+├── Views/             # Vistas de Avalonia (UI)
+├── Helpers/           # Utilidades y ayudantes
+├── Resources/         # Recursos (logos, iconos)
+├── Program.cs         # Punto de entrada
+└── GestorClientes.csproj  # Archivo de proyecto
+```
+
+### Base de Datos
+
+- **Tipo:** SQLite
+- **Archivo:** `gestor.db` (se crea automáticamente)
+- **Migración:** Automática al iniciar la aplicación
+- **Ubicación:** Directorio de la aplicación
+
+### Contribuir
+
+1. Fork el repositorio
+2. Crea una rama para tu feature (`git checkout -b feature/nueva-funcionalidad`)
+3. Commit tus cambios (`git commit -am 'Agrega nueva funcionalidad'`)
+4. Push a la rama (`git push origin feature/nueva-funcionalidad`)
+5. Abre un Pull Request
+
+---
+
 **Versión:** 1.0  
+<<<<<<< Updated upstream
 **Última actualización:** 09-01-2026
+=======
+**Última actualización:** Enero 2026  
+**Licencia:** Ver archivo LICENSE (si aplica)
+>>>>>>> Stashed changes

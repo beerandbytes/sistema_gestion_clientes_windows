@@ -51,14 +51,23 @@ public partial class MainWindow : AppWindow
             {
                 if (File.Exists(iconPath))
                 {
-                    this.Icon = new WindowIcon(iconPath);
-                    return;
+                    try
+                    {
+                        this.Icon = new WindowIcon(iconPath);
+                        Console.WriteLine($"Icono cargado desde: {iconPath}");
+                        return;
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Error al cargar icono desde {iconPath}: {ex.Message}");
+                    }
                 }
             }
+            Console.WriteLine("No se encontró el archivo logo.ico en ninguna ubicación");
         }
-        catch
+        catch (Exception ex)
         {
-            // Si no se puede cargar el icono, continuar sin él
+            Console.WriteLine($"Error en CargarIcono: {ex.Message}");
         }
     }
 

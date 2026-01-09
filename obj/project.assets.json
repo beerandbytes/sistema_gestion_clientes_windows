@@ -2621,11 +2621,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\merak\\OneDrive\\programacion etc\\Documentos\\GitHub\\gestor clientes\\GestorClientes.csproj",
+      "projectUniqueName": "C:\\Users\\merak\\OneDrive\\programacion etc\\Documentos\\GitHub\\gestor clientes\\sistema_gestion_clientes_windows\\GestorClientes.csproj",
       "projectName": "GestorClientes",
-      "projectPath": "C:\\Users\\merak\\OneDrive\\programacion etc\\Documentos\\GitHub\\gestor clientes\\GestorClientes.csproj",
+      "projectPath": "C:\\Users\\merak\\OneDrive\\programacion etc\\Documentos\\GitHub\\gestor clientes\\sistema_gestion_clientes_windows\\GestorClientes.csproj",
       "packagesPath": "C:\\Users\\merak\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\merak\\OneDrive\\programacion etc\\Documentos\\GitHub\\gestor clientes\\obj\\",
+      "outputPath": "C:\\Users\\merak\\OneDrive\\programacion etc\\Documentos\\GitHub\\gestor clientes\\sistema_gestion_clientes_windows\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\merak\\AppData\\Roaming\\NuGet\\NuGet.Config",

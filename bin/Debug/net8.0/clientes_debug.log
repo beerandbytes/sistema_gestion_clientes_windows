@@ -487,3 +487,23 @@
   DataGrid Height: NaN
   DataGrid Width: NaN
   DataGrid Bounds: 1, 1, 1350, 590
+[2026-01-09 12:34:35] DataGrid loaded - ItemsSource count: 28, DataGrid visible: True
+[2026-01-09 12:34:35] DIAGNÓSTICO DataGrid (después de Border):
+  Clientes en colección: 28
+  ItemsSource asignado: True
+  ItemsSource count: 28
+  DataGrid visible: True
+  DataGrid IsLoaded: True
+  DataGrid Height: NaN
+  DataGrid Width: NaN
+  DataGrid Bounds: 1, 1, 1350, 590
+[2026-01-09 12:42:43] DataGrid loaded - ItemsSource count: 28, DataGrid visible: True
+[2026-01-09 12:42:43] DIAGNÓSTICO DataGrid (después de Border):
+  Clientes en colección: 28
+  ItemsSource asignado: True
+  ItemsSource count: 28
+  DataGrid visible: True
+  DataGrid IsLoaded: True
+  DataGrid Height: NaN
+  DataGrid Width: NaN
+  DataGrid Bounds: 1, 1, 1350, 590

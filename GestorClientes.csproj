@@ -5,9 +5,11 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <AssemblyTitle>Sistema de Gestión</AssemblyTitle>
-    <AssemblyProduct>Sistema de Gestión</AssemblyProduct>
-    <AssemblyCompany>Sistema de Gestión</AssemblyCompany>
+    <AssemblyName>GestorClientes</AssemblyName>
+    <RootNamespace>GestorClientes</RootNamespace>
+    <AssemblyTitle>Gestor de Clientes</AssemblyTitle>
+    <AssemblyProduct>Gestor de Clientes</AssemblyProduct>
+    <AssemblyCompany>Gestor de Clientes</AssemblyCompany>
     <ApplicationIcon>Resources\logo.ico</ApplicationIcon>
   </PropertyGroup>
 
@@ -23,10 +25,30 @@
   </ItemGroup>
 
   <ItemGroup>
+    <!-- Logo files from Resources folder -->
     <Content Include="Resources\logo.ico" Condition="Exists('$(MSBuildProjectDirectory)\Resources\logo.ico')">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\logo.ico" Condition="Exists('$(MSBuildProjectDirectory)\Resources\logo.ico')">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>logo.ico</Link>
+    </Content>
+    <Content Include="Resources\logo.png" Condition="Exists('$(MSBuildProjectDirectory)\Resources\logo.png')">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
+  
+  <!-- Asegurar que el logo se copie también en la raíz del directorio de salida -->
+  <Target Name="CopyLogoToRoot" AfterTargets="Build">
+    <PropertyGroup>
+      <LogoSourcePath>$(MSBuildProjectDirectory)\Resources\logo.ico</LogoSourcePath>
+      <LogoDestPath>$(OutputPath)logo.ico</LogoDestPath>
+    </PropertyGroup>
+    <Copy SourceFiles="$(LogoSourcePath)" 
+          DestinationFiles="$(LogoDestPath)" 
+          Condition="Exists('$(LogoSourcePath)')"
+          SkipUnchangedFiles="false" />
+  </Target>
 
   <!-- Copiar logo a la carpeta de publicación -->
   <!-- Funciona tanto para framework-dependent como self-contained -->
