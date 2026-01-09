@@ -1,0 +1,45 @@
+<husk:AppWindow xmlns="https://github.com/avaloniaui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:husk="https://github.com/d3ara1n/Huskui.Avalonia"
+                x:Class="GestorClientes.Views.BackupView"
+                Title="Gestión de Backups"
+                Width="900" Height="600">
+    
+    <Grid RowDefinitions="Auto,*" Margin="24">
+        <!-- Botones de acción -->
+        <husk:Card Grid.Row="0" Margin="0,0,0,16" Padding="16">
+            <StackPanel Orientation="Horizontal" Spacing="12">
+                <Button Content="Crear Backup"
+                       Classes="Success"
+                       Click="OnCrearBackupClick"/>
+                <Button Content="Restaurar"
+                       Classes="Primary"
+                       Click="OnRestaurarClick"/>
+                <Button Content="Eliminar"
+                       Classes="Danger"
+                       Click="OnEliminarClick"/>
+            </StackPanel>
+        </husk:Card>
+
+        <!-- DataGrid de backups -->
+        <DataGrid Grid.Row="1"
+                 x:Name="DataGridBackups"
+                 AutoGenerateColumns="False"
+                 IsReadOnly="True"
+                 GridLinesVisibility="Horizontal"
+                 SelectionChanged="OnSelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Nombre del Archivo" 
+                                   Binding="{Binding NombreArchivo}" 
+                                   Width="*"/>
+                <DataGridTextColumn Header="Fecha de Creación" 
+                                   Binding="{Binding FechaCreacion}" 
+                                   Width="200"/>
+                <DataGridTextColumn Header="Tamaño" 
+                                   Binding="{Binding TamanioFormateado}" 
+                                   Width="120"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</husk:AppWindow>
+

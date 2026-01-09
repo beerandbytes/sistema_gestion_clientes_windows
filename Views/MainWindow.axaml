@@ -1,0 +1,300 @@
+<husk:AppWindow xmlns="https://github.com/avaloniaui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:husk="https://github.com/d3ara1n/Huskui.Avalonia"
+                x:Class="GestorClientes.Views.MainWindow"
+                Title="Sistema de Gestión"
+                Width="1400" Height="900"
+                WindowStartupLocation="CenterScreen"
+                Activated="OnActivated">
+    
+    <Grid ColumnDefinitions="240,*">
+        <!-- Sidebar de Navegación -->
+        <Border Grid.Column="0" 
+                Background="#E6F4FF"
+                BorderBrush="#7AB8F5"
+                BorderThickness="0,0,1,0">
+            <Grid RowDefinitions="Auto,Auto,*">
+                <!-- Header del Sidebar -->
+                <husk:Card Grid.Row="0" 
+                          Padding="20,24"
+                          Background="Transparent"
+                          BorderThickness="0">
+                    <StackPanel Spacing="4">
+                        <TextBlock Text="Sistema de Gestión" 
+                                  FontSize="20"
+                                  FontWeight="Bold"
+                                  Foreground="#003A8C"
+                                  HorizontalAlignment="Center"/>
+                        <Border Height="1" 
+                                Background="#7AB8F5" 
+                                Margin="0,12,0,0"/>
+                    </StackPanel>
+                </husk:Card>
+
+                <!-- Items de Navegación -->
+                <StackPanel Grid.Row="1" 
+                           Spacing="8" 
+                           Margin="12,16,12,0">
+                    <!-- Clientes -->
+                    <Button x:Name="NavClientes"
+                            Classes="Clickable"
+                            Padding="16,12"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Cursor="Hand"
+                            Click="OnClientesClick"
+                            PointerEntered="OnNavItemEnter"
+                            PointerExited="OnNavItemLeave"
+                            HorizontalContentAlignment="Left">
+                        <StackPanel Orientation="Horizontal" Spacing="12">
+                            <TextBlock Text="👥" 
+                                      FontSize="18"
+                                      Foreground="#003A8C"
+                                      VerticalAlignment="Center"
+                                      Margin="0,0,0,2"/>
+                            <TextBlock Text="Clientes" 
+                                      FontSize="14"
+                                      FontWeight="Regular"
+                                      Foreground="#003A8C"
+                                      VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+
+                    <!-- Pagos -->
+                    <Button x:Name="NavPagos"
+                            Classes="Clickable"
+                            Padding="16,12"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Cursor="Hand"
+                            Click="OnPagosClick"
+                            PointerEntered="OnNavItemEnter"
+                            PointerExited="OnNavItemLeave"
+                            HorizontalContentAlignment="Left">
+                        <StackPanel Orientation="Horizontal" Spacing="12">
+                            <TextBlock Text="💰" 
+                                      FontSize="18"
+                                      Foreground="#003A8C"
+                                      VerticalAlignment="Center"
+                                      Margin="0,0,0,2"/>
+                            <TextBlock Text="Pagos" 
+                                      FontSize="14"
+                                      FontWeight="Regular"
+                                      Foreground="#003A8C"
+                                      VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+
+                    <!-- Recordatorios -->
+                    <Button x:Name="NavRecordatorios"
+                            Classes="Clickable"
+                            Padding="16,12"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Cursor="Hand"
+                            Click="OnRecordatoriosClick"
+                            PointerEntered="OnNavItemEnter"
+                            PointerExited="OnNavItemLeave"
+                            HorizontalContentAlignment="Left">
+                        <StackPanel Orientation="Horizontal" Spacing="12">
+                            <TextBlock Text="⚠️" 
+                                      FontSize="18"
+                                      Foreground="#003A8C"
+                                      VerticalAlignment="Center"
+                                      Margin="0,0,0,2"/>
+                            <TextBlock Text="Recordatorios" 
+                                      FontSize="14"
+                                      FontWeight="Regular"
+                                      Foreground="#003A8C"
+                                      VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+
+                    <!-- Resumen -->
+                    <Button x:Name="NavResumen"
+                            Classes="Clickable"
+                            Padding="16,12"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Cursor="Hand"
+                            Click="OnResumenClick"
+                            PointerEntered="OnNavItemEnter"
+                            PointerExited="OnNavItemLeave"
+                            HorizontalContentAlignment="Left">
+                        <StackPanel Orientation="Horizontal" Spacing="12">
+                            <TextBlock Text="📊" 
+                                      FontSize="18"
+                                      Foreground="#003A8C"
+                                      VerticalAlignment="Center"
+                                      Margin="0,0,0,2"/>
+                            <TextBlock Text="Resumen" 
+                                      FontSize="14"
+                                      FontWeight="Regular"
+                                      Foreground="#003A8C"
+                                      VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+
+                    <!-- Reportes -->
+                    <Button x:Name="NavReportes"
+                            Classes="Clickable"
+                            Padding="16,12"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Cursor="Hand"
+                            Click="OnReportesClick"
+                            PointerEntered="OnNavItemEnter"
+                            PointerExited="OnNavItemLeave"
+                            HorizontalContentAlignment="Left">
+                        <StackPanel Orientation="Horizontal" Spacing="12">
+                            <TextBlock Text="📄" 
+                                      FontSize="18"
+                                      Foreground="#003A8C"
+                                      VerticalAlignment="Center"
+                                      Margin="0,0,0,2"/>
+                            <TextBlock Text="Reportes" 
+                                      FontSize="14"
+                                      FontWeight="Regular"
+                                      Foreground="#003A8C"
+                                      VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+
+                    <!-- Backup -->
+                    <Button x:Name="NavBackup"
+                            Classes="Clickable"
+                            Padding="16,12"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Cursor="Hand"
+                            Click="OnBackupClick"
+                            PointerEntered="OnNavItemEnter"
+                            PointerExited="OnNavItemLeave"
+                            HorizontalContentAlignment="Left">
+                        <StackPanel Orientation="Horizontal" Spacing="12">
+                            <TextBlock Text="💾" 
+                                      FontSize="18"
+                                      Foreground="#003A8C"
+                                      VerticalAlignment="Center"
+                                      Margin="0,0,0,2"/>
+                            <TextBlock Text="Backup" 
+                                      FontSize="14"
+                                      FontWeight="Regular"
+                                      Foreground="#003A8C"
+                                      VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- Área de Contenido Principal -->
+        <Grid Grid.Column="1" RowDefinitions="Auto,Auto,*" Margin="24">
+            <!-- Recordatorios (si hay) -->
+            <husk:InfoBar x:Name="RecordatoriosInfoBar"
+                         Grid.Row="0"
+                         IsVisible="False"
+                         Header="Recordatorios"
+                         Margin="0,0,0,16"/>
+
+            <!-- Métricas Dashboard -->
+            <husk:Card Grid.Row="1" Margin="0,0,0,24" Padding="20">
+                <Grid ColumnDefinitions="*,*,*,*,*" ColumnSpacing="16">
+                    <!-- Total Clientes -->
+                    <husk:Card Grid.Column="0" 
+                              Classes="Clickable"
+                              PointerPressed="OnMetricaClick"
+                              Tag="Todos"
+                              Padding="16"
+                              Cursor="Hand">
+                        <StackPanel Spacing="4">
+                            <TextBlock Text="Total Clientes" 
+                                      FontSize="12"
+                                      Foreground="#666666"/>
+                            <TextBlock x:Name="LblTotalClientes" 
+                                      Text="0"
+                                      FontSize="32"
+                                      FontWeight="Bold"/>
+                        </StackPanel>
+                    </husk:Card>
+
+                    <!-- Clientes Activos -->
+                    <husk:Card Grid.Column="1" 
+                              Classes="Clickable"
+                              PointerPressed="OnMetricaClick"
+                              Tag="Activos"
+                              Padding="16"
+                              Cursor="Hand">
+                        <StackPanel Spacing="4">
+                            <TextBlock Text="Activos" 
+                                      FontSize="12"
+                                      Foreground="#666666"/>
+                            <TextBlock x:Name="LblClientesActivos" 
+                                      Text="0"
+                                      FontSize="32"
+                                      FontWeight="Bold"
+                                      Foreground="Lime"/>
+                        </StackPanel>
+                    </husk:Card>
+
+                    <!-- Clientes Vencidos -->
+                    <husk:Card Grid.Column="2" 
+                              Classes="Clickable"
+                              PointerPressed="OnMetricaClick"
+                              Tag="Vencidos"
+                              Padding="16"
+                              Cursor="Hand">
+                        <StackPanel Spacing="4">
+                            <TextBlock Text="Vencidos" 
+                                      FontSize="12"
+                                      Foreground="#666666"/>
+                            <TextBlock x:Name="LblClientesVencidos" 
+                                      Text="0"
+                                      FontSize="32"
+                                      FontWeight="Bold"
+                                      Foreground="Red"/>
+                        </StackPanel>
+                    </husk:Card>
+
+                    <!-- Ingresos del Mes -->
+                    <husk:Card Grid.Column="3" 
+                              Classes="Clickable"
+                              PointerPressed="OnMetricaClick"
+                              Tag="Ingresos"
+                              Padding="16"
+                              Cursor="Hand">
+                        <StackPanel Spacing="4">
+                            <TextBlock Text="Ingresos del Mes" 
+                                      FontSize="12"
+                                      Foreground="#666666"/>
+                            <TextBlock x:Name="LblIngresosMes" 
+                                      Text="$0.00"
+                                      FontSize="32"
+                                      FontWeight="Bold"
+                                      Foreground="Green"/>
+                        </StackPanel>
+                    </husk:Card>
+
+                    <!-- Próximos a Vencer -->
+                    <husk:Card Grid.Column="4" 
+                              Classes="Clickable"
+                              PointerPressed="OnMetricaClick"
+                              Tag="Proximos"
+                              Padding="16"
+                              Cursor="Hand">
+                        <StackPanel Spacing="4">
+                            <TextBlock Text="Próximos (7 días)" 
+                                      FontSize="12"
+                                      Foreground="#666666"/>
+                            <TextBlock x:Name="LblClientesProximos" 
+                                      Text="0"
+                                      FontSize="32"
+                                      FontWeight="Bold"
+                                      Foreground="Orange"/>
+                        </StackPanel>
+                    </husk:Card>
+                </Grid>
+            </husk:Card>
+        </Grid>
+    </Grid>
+</husk:AppWindow>

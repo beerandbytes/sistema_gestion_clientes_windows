@@ -1,0 +1,85 @@
+<husk:AppWindow xmlns="https://github.com/avaloniaui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:husk="https://github.com/d3ara1n/Huskui.Avalonia"
+                x:Class="GestorClientes.Views.RecordatoriosView"
+                Title="Recordatorios"
+                Width="1200" Height="700">
+    
+    <Grid RowDefinitions="Auto,*,*" Margin="24">
+        <!-- Título y botón actualizar -->
+        <Grid Grid.Row="0" ColumnDefinitions="*,Auto" Margin="0,0,0,16">
+            <TextBlock Text="Recordatorios de Vencimientos"
+                      FontSize="20"
+                      FontWeight="Bold"/>
+            <Button Grid.Column="1"
+                   Content="Actualizar"
+                   Classes="Primary"
+                   Click="OnActualizarClick"/>
+        </Grid>
+
+        <!-- Clientes Vencidos -->
+        <husk:Card Grid.Row="1" Margin="0,0,0,16" Padding="16">
+            <StackPanel Spacing="12">
+                <TextBlock x:Name="LblVencidos"
+                          Text="Clientes Vencidos: 0"
+                          FontSize="16"
+                          FontWeight="Bold"/>
+                <DataGrid x:Name="DataGridVencidos"
+                         AutoGenerateColumns="False"
+                         IsReadOnly="True"
+                         GridLinesVisibility="Horizontal">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Nombre" 
+                                           Binding="{Binding Nombre}" 
+                                           Width="*"/>
+                        <DataGridTextColumn Header="Teléfono" 
+                                           Binding="{Binding Telefono}" 
+                                           Width="150"/>
+                        <DataGridTextColumn Header="Fecha Vencimiento" 
+                                           Binding="{Binding FechaVencimiento}" 
+                                           Width="150"/>
+                        <DataGridTextColumn Header="Días Vencido" 
+                                           Binding="{Binding DiasVencido}" 
+                                           Width="120"/>
+                        <DataGridTextColumn Header="Estado" 
+                                           Binding="{Binding Estado}" 
+                                           Width="100"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+        </husk:Card>
+
+        <!-- Clientes Próximos a Vencer -->
+        <husk:Card Grid.Row="2" Padding="16">
+            <StackPanel Spacing="12">
+                <TextBlock x:Name="LblProximos"
+                          Text="Clientes Próximos a Vencer (7 días): 0"
+                          FontSize="16"
+                          FontWeight="Bold"/>
+                <DataGrid x:Name="DataGridProximos"
+                         AutoGenerateColumns="False"
+                         IsReadOnly="True"
+                         GridLinesVisibility="Horizontal">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Nombre" 
+                                           Binding="{Binding Nombre}" 
+                                           Width="*"/>
+                        <DataGridTextColumn Header="Teléfono" 
+                                           Binding="{Binding Telefono}" 
+                                           Width="150"/>
+                        <DataGridTextColumn Header="Fecha Vencimiento" 
+                                           Binding="{Binding FechaVencimiento}" 
+                                           Width="150"/>
+                        <DataGridTextColumn Header="Días Restantes" 
+                                           Binding="{Binding DiasRestantes}" 
+                                           Width="120"/>
+                        <DataGridTextColumn Header="Estado" 
+                                           Binding="{Binding Estado}" 
+                                           Width="100"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+        </husk:Card>
+    </Grid>
+</husk:AppWindow>
+

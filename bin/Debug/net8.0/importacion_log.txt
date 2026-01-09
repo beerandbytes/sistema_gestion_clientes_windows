@@ -1,0 +1,6 @@
+=== Inicio de Importación - 2026-01-07 22:19:05 ===
+Directorio base: C:\Users\merak\OneDrive\programacion etc\Documentos\GitHub\mzboxing\GimnasioApp\bin\Debug\net8.0\
+Ruta del log: C:\Users\merak\OneDrive\programacion etc\Documentos\GitHub\mzboxing\GimnasioApp\bin\Debug\net8.0\importacion_log.txt
+Archivo ODS proporcionado: ruta/al/CLIENTES.ods
+Base de datos inicializada correctamente.
+ERROR: No se encontró el archivo: ruta/al/CLIENTES.ods

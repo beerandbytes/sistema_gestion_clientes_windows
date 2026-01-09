@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyTitle>Sistema de Gestión</AssemblyTitle>
+    <AssemblyProduct>Sistema de Gestión</AssemblyProduct>
+    <AssemblyCompany>Sistema de Gestión</AssemblyCompany>
+    <ApplicationIcon>Resources\logo.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="11.3.10" />
+    <PackageReference Include="Avalonia.Desktop" Version="11.3.10" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.3.10" />
+    <PackageReference Include="Avalonia.Controls.DataGrid" Version="11.3.10" />
+    <PackageReference Include="Huskui.Avalonia" Version="0.10.1" />
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.119" />
+    <PackageReference Include="EPPlus" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\logo.ico" Condition="Exists('$(MSBuildProjectDirectory)\Resources\logo.ico')">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <!-- Copiar logo a la carpeta de publicación -->
+  <!-- Funciona tanto para framework-dependent como self-contained -->
+  <Target Name="CopyLogoToPublish" AfterTargets="Publish">
+    <PropertyGroup>
+      <LogoSourcePath>$(MSBuildProjectDirectory)\Resources\logo.ico</LogoSourcePath>
+      <!-- PublishDir ya incluye la ruta completa para self-contained -->
+      <PublishLogoPath Condition="'$(PublishDir)' != ''">$(PublishDir)Resources\logo.ico</PublishLogoPath>
+      <PublishLogoPath Condition="'$(PublishDir)' == ''">$(OutputPath)Resources\logo.ico</PublishLogoPath>
+      <PublishResourcesDir Condition="'$(PublishDir)' != ''">$(PublishDir)Resources</PublishResourcesDir>
+      <PublishResourcesDir Condition="'$(PublishDir)' == ''">$(OutputPath)Resources</PublishResourcesDir>
+    </PropertyGroup>
+    
+    <MakeDir Directories="$(PublishResourcesDir)" Condition="Exists('$(LogoSourcePath)') AND '$(PublishResourcesDir)' != ''" />
+    
+    <Copy SourceFiles="$(LogoSourcePath)" 
+          DestinationFiles="$(PublishLogoPath)" 
+          Condition="Exists('$(LogoSourcePath)') AND '$(PublishLogoPath)' != ''"
+          SkipUnchangedFiles="false" />
+  </Target>
+
+</Project>

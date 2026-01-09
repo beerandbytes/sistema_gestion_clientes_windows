@@ -1,0 +1,92 @@
+<husk:AppWindow xmlns="https://github.com/avaloniaui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:husk="https://github.com/d3ara1n/Huskui.Avalonia"
+                x:Class="GestorClientes.Views.ResumenView"
+                Title="Resumen"
+                Width="800" Height="500">
+    
+    <Grid RowDefinitions="Auto,*" Margin="24">
+        <!-- Título y botón -->
+        <Grid Grid.Row="0" ColumnDefinitions="*,Auto" Margin="0,0,0,24">
+            <TextBlock Text="Resumen de Métricas"
+                      FontSize="20"
+                      FontWeight="Bold"
+                      VerticalAlignment="Center"/>
+            <Button Grid.Column="1"
+                   Content="Actualizar"
+                   Classes="Primary"
+                   MinWidth="100"
+                   HorizontalAlignment="Stretch"
+                   Click="OnActualizarClick"/>
+        </Grid>
+
+        <!-- Métricas -->
+        <husk:Card Grid.Row="1" Padding="24">
+            <Grid ColumnDefinitions="*,*" RowDefinitions="*,*" ColumnSpacing="16" RowSpacing="16">
+                <!-- Total Clientes -->
+                <husk:Card Grid.Column="0" Grid.Row="0" Padding="20"
+                          HorizontalAlignment="Stretch"
+                          VerticalAlignment="Stretch">
+                    <StackPanel Spacing="8">
+                        <TextBlock Text="Total Clientes"
+                                  FontSize="14"
+                                  Foreground="#666666"/>
+                        <TextBlock x:Name="LblTotalClientes"
+                                  Text="0"
+                                  FontSize="36"
+                                  FontWeight="Bold"/>
+                    </StackPanel>
+                </husk:Card>
+
+                <!-- Clientes Activos -->
+                <husk:Card Grid.Column="1" Grid.Row="0" Padding="20"
+                          HorizontalAlignment="Stretch"
+                          VerticalAlignment="Stretch">
+                    <StackPanel Spacing="8">
+                        <TextBlock Text="Clientes Activos"
+                                  FontSize="14"
+                                  Foreground="#666666"/>
+                        <TextBlock x:Name="LblClientesActivos"
+                                  Text="0"
+                                  FontSize="36"
+                                  FontWeight="Bold"
+                                  Foreground="Lime"/>
+                    </StackPanel>
+                </husk:Card>
+
+                <!-- Clientes Vencidos -->
+                <husk:Card Grid.Column="0" Grid.Row="1" Padding="20"
+                          HorizontalAlignment="Stretch"
+                          VerticalAlignment="Stretch">
+                    <StackPanel Spacing="8">
+                        <TextBlock Text="Clientes Vencidos"
+                                  FontSize="14"
+                                  Foreground="#666666"/>
+                        <TextBlock x:Name="LblClientesVencidos"
+                                  Text="0"
+                                  FontSize="36"
+                                  FontWeight="Bold"
+                                  Foreground="Red"/>
+                    </StackPanel>
+                </husk:Card>
+
+                <!-- Ingresos del Mes -->
+                <husk:Card Grid.Column="1" Grid.Row="1" Padding="20"
+                          HorizontalAlignment="Stretch"
+                          VerticalAlignment="Stretch">
+                    <StackPanel Spacing="8">
+                        <TextBlock Text="Ingresos del Mes"
+                                  FontSize="14"
+                                  Foreground="#666666"/>
+                        <TextBlock x:Name="LblIngresosMes"
+                                  Text="€0.00"
+                                  FontSize="36"
+                                  FontWeight="Bold"
+                                  Foreground="Green"/>
+                    </StackPanel>
+                </husk:Card>
+            </Grid>
+        </husk:Card>
+    </Grid>
+</husk:AppWindow>
+

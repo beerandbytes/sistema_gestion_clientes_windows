@@ -1,0 +1,66 @@
+<husk:AppWindow xmlns="https://github.com/avaloniaui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:husk="https://github.com/d3ara1n/Huskui.Avalonia"
+                x:Class="GestorClientes.Views.LoginView"
+                Title="Sistema de Gestión - Login"
+                Width="400" Height="450"
+                WindowStartupLocation="CenterScreen"
+                CanResize="False"
+                ShowInTaskbar="True">
+    
+    <Grid RowDefinitions="Auto,*,Auto" Margin="40">
+        <!-- Título -->
+        <husk:Card Grid.Row="0" Margin="0,0,0,30">
+            <StackPanel Spacing="8" HorizontalAlignment="Center">
+                <TextBlock Text="Sistema de Gestión" 
+                          FontSize="28"
+                          FontWeight="Bold"
+                          HorizontalAlignment="Center"
+                          Foreground="#000000"/>
+            </StackPanel>
+        </husk:Card>
+
+        <!-- Formulario -->
+        <husk:Card Grid.Row="1" Padding="24">
+            <StackPanel Spacing="20">
+                <!-- Usuario -->
+                <StackPanel Spacing="8">
+                    <TextBlock Text="Usuario:" 
+                              FontWeight="SemiBold"
+                              Foreground="#666666"/>
+                    <TextBox x:Name="TxtUsuario" 
+                            Watermark="Ingrese su usuario"
+                            KeyDown="OnKeyDown"/>
+                </StackPanel>
+
+                <!-- Contraseña -->
+                <StackPanel Spacing="8">
+                    <TextBlock Text="Contraseña:" 
+                              FontWeight="SemiBold"
+                              Foreground="#666666"/>
+                    <TextBox x:Name="TxtContraseña" 
+                            PasswordChar="*"
+                            Watermark="Ingrese su contraseña"
+                            KeyDown="OnKeyDown"/>
+                </StackPanel>
+
+                <!-- Botón Login -->
+                <Button x:Name="BtnLogin" 
+                       Content="Iniciar Sesión"
+                       Classes="Primary"
+                       HorizontalAlignment="Stretch"
+                       Height="45"
+                       Margin="0,10,0,0"
+                       Click="OnLoginClick"/>
+            </StackPanel>
+        </husk:Card>
+
+        <!-- InfoBar para errores -->
+        <husk:InfoBar x:Name="ErrorInfoBar"
+                     Grid.Row="2"
+                     IsVisible="False"
+                     Header="Error de autenticación"
+                     Margin="0,16,0,0"/>
+    </Grid>
+</husk:AppWindow>
+

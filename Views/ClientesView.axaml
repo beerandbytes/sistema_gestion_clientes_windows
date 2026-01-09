@@ -1,0 +1,181 @@
+<husk:AppWindow xmlns="https://github.com/avaloniaui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:husk="https://github.com/d3ara1n/Huskui.Avalonia"
+                x:Class="GestorClientes.Views.ClientesView"
+                Title="Gestión de Clientes"
+                Width="1400" Height="800"
+                KeyDown="OnKeyDown"
+                Loaded="OnWindowLoaded">
+    
+    <Grid RowDefinitions="Auto,Auto,*" Margin="24">
+        <!-- Barra de búsqueda y filtros -->
+        <husk:Card Grid.Row="0" Margin="0,0,0,16" Padding="16">
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
+                <Grid RowDefinitions="Auto,Auto" RowSpacing="12" MinWidth="800">
+                    <!-- Primera fila: búsqueda y acciones principales -->
+                    <Grid Grid.Row="0" ColumnDefinitions="*,Auto,Auto,Auto,Auto,Auto,Auto" ColumnSpacing="8">
+                        <TextBox Grid.Column="0"
+                                x:Name="TxtBusqueda"
+                                MinWidth="200"
+                                HorizontalAlignment="Stretch"
+                                Watermark="Buscar por nombre, apellidos o teléfono..."
+                                TextChanged="OnBusquedaChanged"/>
+
+                        <ComboBox Grid.Column="1"
+                                 x:Name="CmbFiltro"
+                                 MinWidth="120"
+                                 MaxWidth="200"
+                                 HorizontalAlignment="Stretch"
+                                 SelectedIndex="0"
+                                 SelectionChanged="OnFiltroChanged">
+                            <ComboBoxItem Content="Todos"/>
+                            <ComboBoxItem Content="Activos"/>
+                            <ComboBoxItem Content="Vencidos"/>
+                        </ComboBox>
+
+                        <Button Grid.Column="2" 
+                               Content="Agregar"
+                               Classes="Success"
+                               MinWidth="90"
+                               HorizontalAlignment="Stretch"
+                               Click="OnAgregarClick"
+                               ToolTip.Tip="Agregar nuevo cliente (Ctrl+N)"/>
+
+                        <Button Grid.Column="3" 
+                               Content="Editar"
+                               Classes="Primary"
+                               MinWidth="90"
+                               HorizontalAlignment="Stretch"
+                               Click="OnEditarClick"/>
+
+                        <Button Grid.Column="4" 
+                               Content="Eliminar"
+                               Classes="Danger"
+                               MinWidth="90"
+                               HorizontalAlignment="Stretch"
+                               Click="OnEliminarClick"/>
+
+                        <Button Grid.Column="5" 
+                               Content="Ver Pagos"
+                               Classes="Accent"
+                               MinWidth="100"
+                               HorizontalAlignment="Stretch"
+                               Click="OnVerPagosClick"/>
+
+                        <Button Grid.Column="6" 
+                               Content="Registrar Pago"
+                               Classes="Success"
+                               MinWidth="110"
+                               HorizontalAlignment="Stretch"
+                               Click="OnRegistrarPagoClick"/>
+                    </Grid>
+                    
+                    <!-- Segunda fila: acciones de selección múltiple -->
+                    <Grid Grid.Row="1" ColumnDefinitions="Auto,Auto,Auto,*" ColumnSpacing="8">
+                        <Button Grid.Column="0" 
+                               Content="Seleccionar Todo"
+                               Classes="Primary"
+                               MinWidth="110"
+                               HorizontalAlignment="Stretch"
+                               Click="OnSeleccionarTodoClick"/>
+                        
+                        <Button Grid.Column="1" 
+                               Content="Seleccionar Ninguno"
+                               Classes="Primary"
+                               MinWidth="130"
+                               HorizontalAlignment="Stretch"
+                               Click="OnSeleccionarNingunoClick"/>
+                        
+                        <Button Grid.Column="2" 
+                               Content="Cambiar Estado"
+                               Classes="Accent"
+                               MinWidth="110"
+                               HorizontalAlignment="Stretch"
+                               Click="OnCambiarEstadoClick"/>
+                        
+                        <TextBlock Grid.Column="3"
+                                  x:Name="LblSeleccionados"
+                                  Text="0 cliente(s) seleccionado(s)"
+                                  VerticalAlignment="Center"
+                                  Margin="12,0,0,0"
+                                  Foreground="#666666"
+                                  TextWrapping="Wrap"/>
+                    </Grid>
+                </Grid>
+            </ScrollViewer>
+        </husk:Card>
+
+        <!-- Contador de resultados -->
+        <TextBlock Grid.Row="1" 
+                  x:Name="LblContador"
+                  Text="Total: 0 cliente(s)"
+                  Margin="0,0,0,8"
+                  Foreground="#666666"/>
+
+        <!-- DataGrid -->
+        <Border Grid.Row="2" 
+                BorderBrush="#CCCCCC" 
+                BorderThickness="1">
+            <DataGrid x:Name="DataGridClientes"
+                     AutoGenerateColumns="False"
+                     IsReadOnly="False"
+                     GridLinesVisibility="All"
+                     HeadersVisibility="Column"
+                     CanUserReorderColumns="False"
+                     CanUserResizeColumns="True"
+                     SelectionMode="Single"
+                     HorizontalScrollBarVisibility="Auto"
+                     VerticalScrollBarVisibility="Auto"
+                     DoubleTapped="OnDataGridDoubleClick"
+                     SelectionChanged="OnSelectionChanged"
+                     Loaded="OnDataGridLoaded"
+                     CellEditEnding="OnCellEditEnding"
+                     CurrentCellChanged="OnCurrentCellChanged">
+                <DataGrid.Columns>
+                    <DataGridCheckBoxColumn Header="" 
+                                           Binding="{Binding IsSelected, Mode=TwoWay}" 
+                                           Width="40"
+                                           CanUserResize="False"
+                                           IsReadOnly="False"/>
+                    <DataGridTextColumn Header="Nombre Completo" 
+                                       Binding="{Binding NombreCompleto}" 
+                                       Width="*"
+                                       IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Edad" 
+                                       Binding="{Binding Edad}" 
+                                       Width="80"
+                                       IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Peso (kg)" 
+                                       Binding="{Binding Peso, StringFormat='{}{0:N1}'}" 
+                                       Width="100"
+                                       IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Teléfono" 
+                                       Binding="{Binding Telefono}" 
+                                       Width="150"
+                                       IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Fecha Alta" 
+                                       Binding="{Binding FechaAlta}" 
+                                       Width="120"
+                                       IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Último Pago" 
+                                       Binding="{Binding FechaUltimoPago}" 
+                                       Width="120"
+                                       IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Vencimiento" 
+                                       Binding="{Binding FechaVencimiento}" 
+                                       Width="130"
+                                       IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Estado" 
+                                       Binding="{Binding Estado}" 
+                                       Width="100"
+                                       IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Días Restantes" 
+                                       Binding="{Binding DiasRestantes}" 
+                                       Width="120"
+                                       IsReadOnly="True"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Border>
+    </Grid>
+</husk:AppWindow>
+

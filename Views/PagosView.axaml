@@ -1,0 +1,305 @@
+<husk:AppWindow xmlns="https://github.com/avaloniaui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:husk="https://github.com/d3ara1n/Huskui.Avalonia"
+                x:Class="GestorClientes.Views.PagosView"
+                Title="Registro de Pagos"
+                Width="1200" Height="800"
+                MinWidth="900" MinHeight="600">
+    
+    <Grid RowDefinitions="Auto,Auto,Auto,*" Margin="20">
+        <!-- Sección 1: Registrar Nuevo Pago -->
+        <husk:Card Grid.Row="0" Margin="0,0,0,20" Padding="24">
+            <StackPanel Spacing="20">
+                <TextBlock Text="Registrar Nuevo Pago"
+                          FontSize="20"
+                          FontWeight="Bold"
+                          Foreground="#1A1A1A"
+                          Margin="0,0,0,4"/>
+                
+                <Grid ColumnDefinitions="150,*" RowDefinitions="Auto,Auto,Auto,Auto,Auto" 
+                      ColumnSpacing="20" RowSpacing="16">
+                    <!-- Buscar Cliente -->
+                    <TextBlock Grid.Row="0" Grid.Column="0"
+                              Text="Buscar Cliente:"
+                              VerticalAlignment="Center"
+                              FontWeight="SemiBold"
+                              Foreground="#424242"/>
+                    <TextBox Grid.Row="0" Grid.Column="1"
+                            x:Name="TxtBusqueda"
+                            HorizontalAlignment="Stretch"
+                            Watermark="Escriba nombre, apellidos o teléfono para filtrar..."
+                            Padding="12,10"
+                            FontSize="14"
+                            TextChanged="OnBusquedaChanged"/>
+                    
+                    <!-- Seleccionar Cliente -->
+                    <TextBlock Grid.Row="1" Grid.Column="0"
+                              Text="Cliente:"
+                              VerticalAlignment="Center"
+                              FontWeight="SemiBold"
+                              Foreground="#424242"/>
+                    <ComboBox Grid.Row="1" Grid.Column="1"
+                             x:Name="CmbCliente"
+                             HorizontalAlignment="Stretch"
+                             SelectionChanged="OnClienteChanged"
+                             PlaceholderText="Seleccione un cliente de la lista"
+                             Padding="12,10"
+                             FontSize="14"/>
+                    
+                    <!-- Fecha de Pago -->
+                    <TextBlock Grid.Row="2" Grid.Column="0"
+                              Text="Fecha de Pago:"
+                              VerticalAlignment="Center"
+                              FontWeight="SemiBold"
+                              Foreground="#424242"/>
+                    <DatePicker Grid.Row="2" Grid.Column="1"
+                               x:Name="DtpFechaPago"
+                               HorizontalAlignment="Stretch"
+                               Padding="12,10"
+                               FontSize="14"/>
+                    
+                    <!-- Cantidad -->
+                    <TextBlock Grid.Row="3" Grid.Column="0"
+                              Text="Cantidad:"
+                              VerticalAlignment="Center"
+                              FontWeight="SemiBold"
+                              Foreground="#424242"/>
+                    <TextBox Grid.Row="3" Grid.Column="1"
+                            x:Name="TxtCantidad" 
+                            Watermark="Ingrese la cantidad (ej: 55.00)"
+                            HorizontalAlignment="Stretch"
+                            Padding="12,10"
+                            FontSize="14"/>
+                    
+                    <!-- Botón Registrar -->
+                    <Grid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"
+                          Margin="0,12,0,0">
+                        <Button HorizontalAlignment="Center"
+                               Content="Registrar Pago"
+                               Classes="Success"
+                               MinWidth="220"
+                               Padding="32,12"
+                               FontSize="15"
+                               FontWeight="SemiBold"
+                               Cursor="Hand"
+                               Click="OnRegistrarPagoClick"/>
+                    </Grid>
+                </Grid>
+            </StackPanel>
+        </husk:Card>
+
+        <!-- Sección 2: Consultar Historial -->
+        <husk:Card Grid.Row="1" Margin="0,0,0,20" Padding="24">
+            <StackPanel Spacing="16">
+                <TextBlock Text="Consultar Historial"
+                          FontSize="20"
+                          FontWeight="Bold"
+                          Foreground="#1A1A1A"
+                          Margin="0,0,0,4"/>
+                
+                <TabControl SelectionChanged="OnTabControlSelectionChanged"
+                           FontSize="14">
+                    <TabItem Header="Por Fecha">
+                        <StackPanel Spacing="16" Margin="0,16">
+                            <Grid ColumnDefinitions="Auto,*,Auto,*" 
+                                  ColumnSpacing="16" 
+                                  RowSpacing="16">
+                                <TextBlock Grid.Column="0" 
+                                          Text="Desde:" 
+                                          VerticalAlignment="Center"
+                                          MinWidth="100"
+                                          FontWeight="SemiBold"
+                                          Foreground="#424242"/>
+                                <DatePicker Grid.Column="1" 
+                                           x:Name="DtpFechaInicio" 
+                                           HorizontalAlignment="Stretch"
+                                           Padding="12,10"
+                                           FontSize="14"/>
+                                <TextBlock Grid.Column="2" 
+                                          Text="Hasta:" 
+                                          VerticalAlignment="Center"
+                                          MinWidth="100"
+                                          FontWeight="SemiBold"
+                                          Foreground="#424242"/>
+                                <DatePicker Grid.Column="3" 
+                                           x:Name="DtpFechaFin" 
+                                           HorizontalAlignment="Stretch"
+                                           Padding="12,10"
+                                           FontSize="14"/>
+                            </Grid>
+                            <StackPanel Orientation="Horizontal" 
+                                       Spacing="12" 
+                                       HorizontalAlignment="Right"
+                                       Margin="0,8,0,0">
+                                <Button Content="Filtrar"
+                                       Classes="Primary"
+                                       MinWidth="130"
+                                       Padding="20,10"
+                                       FontSize="14"
+                                       FontWeight="SemiBold"
+                                       Cursor="Hand"
+                                       Click="OnFiltrarPorFechaClick"/>
+                                <Button Content="Exportar Excel"
+                                       Classes="Success"
+                                       MinWidth="150"
+                                       Padding="20,10"
+                                       FontSize="14"
+                                       FontWeight="SemiBold"
+                                       Cursor="Hand"
+                                       Click="OnExportarExcelPorFechaClick"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </TabItem>
+                    
+                    <TabItem Header="Por Mes/Año">
+                        <StackPanel Spacing="16" Margin="0,16">
+                            <Grid ColumnDefinitions="Auto,*,Auto,*" 
+                                  ColumnSpacing="16" 
+                                  RowSpacing="16">
+                                <TextBlock Grid.Column="0" 
+                                          Text="Mes:" 
+                                          VerticalAlignment="Center"
+                                          MinWidth="100"
+                                          FontWeight="SemiBold"
+                                          Foreground="#424242"/>
+                                <ComboBox Grid.Column="1" 
+                                         x:Name="CmbMes" 
+                                         HorizontalAlignment="Stretch"
+                                         Padding="12,10"
+                                         FontSize="14"/>
+                                <TextBlock Grid.Column="2" 
+                                          Text="Año:" 
+                                          VerticalAlignment="Center"
+                                          MinWidth="100"
+                                          FontWeight="SemiBold"
+                                          Foreground="#424242"/>
+                                <TextBox Grid.Column="3" 
+                                        x:Name="TxtAnio" 
+                                        HorizontalAlignment="Stretch"
+                                        Padding="12,10"
+                                        FontSize="14"
+                                        Watermark="Año (ej: 2026)"/>
+                            </Grid>
+                            <StackPanel Orientation="Horizontal" 
+                                       Spacing="12" 
+                                       HorizontalAlignment="Right"
+                                       Margin="0,8,0,0">
+                                <Button Content="Filtrar"
+                                       Classes="Primary"
+                                       MinWidth="130"
+                                       Padding="20,10"
+                                       FontSize="14"
+                                       FontWeight="SemiBold"
+                                       Cursor="Hand"
+                                       Click="OnFiltrarPorMesClick"/>
+                                <Button Content="Exportar Excel"
+                                       Classes="Success"
+                                       MinWidth="150"
+                                       Padding="20,10"
+                                       FontSize="14"
+                                       FontWeight="SemiBold"
+                                       Cursor="Hand"
+                                       Click="OnExportarExcelPorMesClick"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </TabItem>
+                    
+                    <TabItem Header="Todos">
+                        <StackPanel Spacing="16" Margin="0,16">
+                            <TextBlock Text="Mostrando todos los pagos registrados" 
+                                      VerticalAlignment="Center"
+                                      FontStyle="Italic"
+                                      Foreground="#757575"
+                                      FontSize="14"
+                                      Margin="0,8"/>
+                            <StackPanel Orientation="Horizontal" 
+                                       Spacing="12" 
+                                       HorizontalAlignment="Right"
+                                       Margin="0,8,0,0">
+                                <Button Content="Exportar Excel"
+                                       Classes="Success"
+                                       MinWidth="150"
+                                       Padding="20,10"
+                                       FontSize="14"
+                                       FontWeight="SemiBold"
+                                       Cursor="Hand"
+                                       Click="OnExportarExcelTodosClick"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </TabItem>
+                </TabControl>
+            </StackPanel>
+        </husk:Card>
+
+        <!-- Sección 3: Historial de Pagos -->
+        <StackPanel Grid.Row="2" Spacing="12" Margin="0,0,0,12">
+            <TextBlock Text="Historial de Pagos"
+                      FontSize="20"
+                      FontWeight="Bold"
+                      Foreground="#1A1A1A"
+                      Margin="0,0,0,4"/>
+            
+            <!-- Barra de estado con total y contador -->
+            <Border Background="#F8F9FA"
+                   BorderBrush="#E0E0E0"
+                   BorderThickness="1"
+                   CornerRadius="6"
+                   Padding="16,12">
+                <Grid ColumnDefinitions="*,Auto,Auto" ColumnSpacing="20">
+                    <TextBlock Grid.Column="0"
+                              x:Name="LblContador"
+                              Text="Registros: 0"
+                              VerticalAlignment="Center"
+                              FontWeight="SemiBold"
+                              FontSize="14"
+                              Foreground="#616161"/>
+                    <Border Grid.Column="1"
+                           Width="1"
+                           Background="#E0E0E0"
+                           VerticalAlignment="Stretch"
+                           Margin="0,4"/>
+                    <TextBlock Grid.Column="2"
+                              x:Name="LblTotal"
+                              Text="Total: €0.00"
+                              FontWeight="Bold"
+                              FontSize="16"
+                              VerticalAlignment="Center"
+                              Foreground="#2E7D32"/>
+                </Grid>
+            </Border>
+        </StackPanel>
+
+        <!-- Tabla de pagos -->
+        <Border Grid.Row="3" 
+                BorderBrush="#E0E0E0" 
+                BorderThickness="1"
+                CornerRadius="6"
+                Background="White">
+            <DataGrid x:Name="DataGridPagos"
+                     AutoGenerateColumns="False"
+                     IsReadOnly="True"
+                     GridLinesVisibility="Horizontal"
+                     HeadersVisibility="Column"
+                     CanUserReorderColumns="False"
+                     CanUserResizeColumns="True"
+                     Background="White"
+                     BorderThickness="0"
+                     FontSize="14"
+                     HorizontalGridLinesBrush="#E8E8E8"
+                     VerticalGridLinesBrush="Transparent">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Cliente" 
+                                       Binding="{Binding Cliente}" 
+                                       Width="*"/>
+                    <DataGridTextColumn Header="Fecha de Pago" 
+                                       Binding="{Binding FechaPago}" 
+                                       Width="180"/>
+                    <DataGridTextColumn Header="Cantidad" 
+                                       Binding="{Binding Cantidad, StringFormat='{}{0:C}'}" 
+                                       Width="150"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Border>
+    </Grid>
+</husk:AppWindow>
+

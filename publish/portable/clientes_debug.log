@@ -1,0 +1,10 @@
+[2026-01-09 11:54:52] DataGrid loaded - ItemsSource count: 67, DataGrid visible: True
+[2026-01-09 11:54:52] DIAGNÓSTICO DataGrid (después de Border):
+  Clientes en colección: 67
+  ItemsSource asignado: True
+  ItemsSource count: 67
+  DataGrid visible: True
+  DataGrid IsLoaded: True
+  DataGrid Height: NaN
+  DataGrid Width: NaN
+  DataGrid Bounds: 1, 1, 1350, 590

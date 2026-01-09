@@ -1,0 +1,145 @@
+<husk:AppWindow xmlns="https://github.com/avaloniaui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:husk="https://github.com/d3ara1n/Huskui.Avalonia"
+                x:Class="GestorClientes.Views.ReportesView"
+                Title="Reportes"
+                Width="1200" Height="700">
+    <TabControl Margin="24">
+    
+    <TabItem Header="Por Fecha">
+        <Grid RowDefinitions="Auto,Auto,*" Margin="16">
+            <husk:Card Grid.Row="0" Margin="0,0,0,16" Padding="16">
+                <Grid ColumnDefinitions="Auto,*,Auto,*,Auto,Auto" ColumnSpacing="12">
+                    <TextBlock Grid.Column="0" Text="Desde:" VerticalAlignment="Center" MinWidth="50"/>
+                    <DatePicker Grid.Column="1" x:Name="DtpFechaInicio" MinWidth="120" HorizontalAlignment="Stretch"/>
+                    <TextBlock Grid.Column="2" Text="Hasta:" VerticalAlignment="Center" MinWidth="50"/>
+                    <DatePicker Grid.Column="3" x:Name="DtpFechaFin" MinWidth="120" HorizontalAlignment="Stretch"/>
+                    <Button Grid.Column="4" 
+                           Content="Filtrar"
+                           Classes="Primary"
+                           MinWidth="100"
+                           Click="OnFiltrarPorFechaClick"/>
+                    <Button Grid.Column="5" 
+                           Content="Descargar Excel"
+                           Classes="Success"
+                           MinWidth="120"
+                           Click="OnDescargarExcelPorFechaClick"/>
+                </Grid>
+            </husk:Card>
+            <TextBlock Grid.Row="1" 
+                      x:Name="LblTotalPorFecha"
+                      Text="Total: €0.00"
+                      FontWeight="Bold"
+                      Margin="0,0,0,8"/>
+            <Border Grid.Row="2" 
+                    BorderBrush="#CCCCCC" 
+                    BorderThickness="1"
+                    MinHeight="300">
+                <DataGrid x:Name="DataGridPagosPorFecha"
+                         AutoGenerateColumns="False"
+                         IsReadOnly="True"
+                         GridLinesVisibility="Horizontal"
+                         HeadersVisibility="Column"
+                         CanUserReorderColumns="False"
+                         CanUserResizeColumns="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Cliente" Binding="{Binding Cliente}" Width="*"/>
+                        <DataGridTextColumn Header="Fecha de Pago" Binding="{Binding FechaPago}" Width="150"/>
+                        <DataGridTextColumn Header="Cantidad" Binding="{Binding Cantidad, StringFormat='{}{0:C}'}" Width="120"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Border>
+        </Grid>
+    </TabItem>
+
+    <TabItem Header="Por Mes">
+        <Grid RowDefinitions="Auto,Auto,*" Margin="16">
+            <husk:Card Grid.Row="0" Margin="0,0,0,16" Padding="16">
+                <Grid ColumnDefinitions="Auto,*,Auto,*,Auto,Auto" ColumnSpacing="12">
+                    <TextBlock Grid.Column="0" Text="Mes:" VerticalAlignment="Center" MinWidth="40"/>
+                    <ComboBox Grid.Column="1" x:Name="CmbMes" MinWidth="120" MaxWidth="200"/>
+                    <TextBlock Grid.Column="2" Text="Año:" VerticalAlignment="Center" MinWidth="40"/>
+                    <TextBox Grid.Column="3" x:Name="TxtAnio" MinWidth="80" MaxWidth="120"/>
+                    <Button Grid.Column="4" 
+                           Content="Filtrar"
+                           Classes="Primary"
+                           MinWidth="100"
+                           Click="OnFiltrarPorMesClick"/>
+                    <Button Grid.Column="5" 
+                           Content="Descargar Excel"
+                           Classes="Success"
+                           MinWidth="120"
+                           Click="OnDescargarExcelPorMesClick"/>
+                </Grid>
+            </husk:Card>
+            <TextBlock Grid.Row="1" 
+                      x:Name="LblTotalPorMes"
+                      Text="Total del mes: €0.00"
+                      FontWeight="Bold"
+                      Margin="0,0,0,8"/>
+            <Border Grid.Row="2" 
+                    BorderBrush="#CCCCCC" 
+                    BorderThickness="1"
+                    MinHeight="300">
+                <DataGrid x:Name="DataGridPagosPorMes"
+                         AutoGenerateColumns="False"
+                         IsReadOnly="True"
+                         GridLinesVisibility="Horizontal"
+                         HeadersVisibility="Column"
+                         CanUserReorderColumns="False"
+                         CanUserResizeColumns="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Cliente" Binding="{Binding Cliente}" Width="*"/>
+                        <DataGridTextColumn Header="Fecha de Pago" Binding="{Binding FechaPago}" Width="150"/>
+                        <DataGridTextColumn Header="Cantidad" Binding="{Binding Cantidad, StringFormat='{}{0:C}'}" Width="120"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Border>
+        </Grid>
+    </TabItem>
+
+    <TabItem Header="Por Cliente">
+        <Grid RowDefinitions="Auto,Auto,*" Margin="16">
+            <husk:Card Grid.Row="0" Margin="0,0,0,16" Padding="16">
+                <Grid ColumnDefinitions="Auto,*,Auto,Auto" ColumnSpacing="12">
+                    <TextBlock Grid.Column="0" Text="Cliente:" VerticalAlignment="Center" MinWidth="60"/>
+                    <ComboBox Grid.Column="1" x:Name="CmbClienteHistorial" MinWidth="200"/>
+                    <Button Grid.Column="2" 
+                           Content="Ver Historial"
+                           Classes="Primary"
+                           MinWidth="120"
+                           Click="OnVerHistorialClick"/>
+                    <Button Grid.Column="3" 
+                           Content="Descargar Excel"
+                           Classes="Success"
+                           MinWidth="120"
+                           Click="OnDescargarExcelHistorialClick"/>
+                </Grid>
+            </husk:Card>
+            <TextBlock Grid.Row="1" 
+                      x:Name="LblTotalHistorial"
+                      Text="Total histórico: €0.00"
+                      FontWeight="Bold"
+                      Margin="0,0,0,8"/>
+            <Border Grid.Row="2" 
+                    BorderBrush="#CCCCCC" 
+                    BorderThickness="1"
+                    MinHeight="300">
+                <DataGrid x:Name="DataGridHistorial"
+                         AutoGenerateColumns="False"
+                         IsReadOnly="True"
+                         GridLinesVisibility="Horizontal"
+                         HeadersVisibility="Column"
+                         CanUserReorderColumns="False"
+                         CanUserResizeColumns="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Fecha de Pago" Binding="{Binding FechaPago}" Width="*"/>
+                        <DataGridTextColumn Header="Cantidad" Binding="{Binding Cantidad, StringFormat='{}{0:C}'}" Width="*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Border>
+        </Grid>
+    </TabItem>
+    </TabControl>
+</husk:AppWindow>
+

@@ -1,0 +1,94 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:husk="https://github.com/d3ara1n/Huskui.Avalonia"
+        x:Class="GestorClientes.Views.ClienteModalView"
+        Title="Agregar Cliente"
+        Width="500" Height="600"
+        WindowStartupLocation="CenterOwner"
+        CanResize="False">
+    
+    <husk:Card Margin="20" Padding="24">
+        <StackPanel Spacing="20">
+            <TextBlock x:Name="LblTitulo" 
+                      Text="Agregar Cliente"
+                      FontSize="20"
+                      FontWeight="Bold"
+                      Margin="0,0,0,10"/>
+
+            <!-- Nombre -->
+            <StackPanel Spacing="4">
+                <TextBlock Text="Nombre *" FontWeight="SemiBold"/>
+                <TextBox x:Name="TxtNombre" 
+                        TextChanged="OnNombreChanged"/>
+                <TextBlock x:Name="LblErrorNombre" 
+                          Foreground="Red"
+                          FontSize="11"
+                          IsVisible="False"/>
+            </StackPanel>
+
+            <!-- Apellidos -->
+            <StackPanel Spacing="4">
+                <TextBlock Text="Apellidos" FontWeight="SemiBold"/>
+                <TextBox x:Name="TxtApellidos"/>
+            </StackPanel>
+
+            <!-- Edad -->
+            <StackPanel Spacing="4">
+                <TextBlock Text="Edad" FontWeight="SemiBold"/>
+                <NumericUpDown x:Name="NumEdad" 
+                              Minimum="0" 
+                              Maximum="150" 
+                              Value="18"/>
+            </StackPanel>
+
+            <!-- Peso -->
+            <StackPanel Spacing="4">
+                <TextBlock Text="Peso (kg)" FontWeight="SemiBold"/>
+                <NumericUpDown x:Name="NumPeso" 
+                              Minimum="0" 
+                              Maximum="500" 
+                              Value="70"
+                              FormatString="F1"/>
+            </StackPanel>
+
+            <!-- Teléfono -->
+            <StackPanel Spacing="4">
+                <TextBlock Text="Teléfono" FontWeight="SemiBold"/>
+                <TextBox x:Name="TxtTelefono" 
+                        TextChanged="OnTelefonoChanged"/>
+                <TextBlock x:Name="LblErrorTelefono" 
+                          Foreground="Red"
+                          FontSize="11"
+                          IsVisible="False"/>
+            </StackPanel>
+
+            <!-- Fecha Alta -->
+            <StackPanel Spacing="4">
+                <TextBlock Text="Fecha de Alta" FontWeight="SemiBold"/>
+                <DatePicker x:Name="DtpFechaAlta"/>
+            </StackPanel>
+
+            <!-- Días Membresía -->
+            <StackPanel Spacing="4">
+                <TextBlock Text="Días de Membresía" FontWeight="SemiBold"/>
+                <NumericUpDown x:Name="NumDiasMembresia" 
+                              Minimum="1" 
+                              Maximum="365" 
+                              Value="30"
+                              IsEnabled="True"/>
+            </StackPanel>
+
+            <!-- Botones -->
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="12" Margin="0,20,0,0">
+                <Button Grid.Column="0" 
+                       Content="Guardar"
+                       Classes="Primary"
+                       Click="OnGuardarClick"/>
+                <Button Grid.Column="1" 
+                       Content="Cancelar"
+                       Click="OnCancelarClick"/>
+            </Grid>
+        </StackPanel>
+    </husk:Card>
+</Window>
+

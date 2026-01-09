@@ -1,0 +1,489 @@
+[2026-01-07 22:24:32] ERROR: DataGridClientes es NULL en ApplyFilter
+[2026-01-07 22:24:32] Loaded 67 clients from database
+[2026-01-07 22:24:32] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-07 22:24:32] DataGrid loaded - ItemsSource count: 67, DataGrid visible: True
+[2026-01-07 22:24:32] DIAGNÓSTICO DataGrid:
+  Clientes en colección: 67
+  ItemsSource asignado: True
+  ItemsSource count: 67
+  DataGrid visible: True
+  DataGrid IsLoaded: True
+  DataGrid Height: NaN
+  DataGrid Width: NaN
+[2026-01-07 22:24:34] Loaded 67 clients from database
+[2026-01-07 22:24:34] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-07 22:24:35] Loaded 67 clients from database
+[2026-01-07 22:24:35] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-07 22:24:35] Loaded 67 clients from database
+[2026-01-07 22:24:35] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-07 22:24:35] Loaded 67 clients from database
+[2026-01-07 22:24:35] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-07 22:24:36] Loaded 67 clients from database
+[2026-01-07 22:24:36] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-07 22:24:36] Loaded 67 clients from database
+[2026-01-07 22:24:36] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-07 22:24:36] Loaded 67 clients from database
+[2026-01-07 22:24:36] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-07 22:24:36] Loaded 67 clients from database
+[2026-01-07 22:24:36] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-07 22:24:39] ApplyFilter - Display: 39, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-07 22:24:39] ApplyFilter - Display: 2, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-07 22:24:40] ApplyFilter - Display: 0, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-07 22:24:40] ApplyFilter - Display: 0, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-07 22:24:40] ApplyFilter - Display: 0, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-07 22:24:40] ApplyFilter - Display: 0, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-07 22:24:40] ApplyFilter - Display: 0, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-07 22:24:40] ApplyFilter - Display: 0, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-07 22:24:41] ApplyFilter - Display: 0, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-07 22:24:41] ApplyFilter - Display: 0, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-07 22:24:41] ApplyFilter - Display: 0, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-07 22:24:41] ApplyFilter - Display: 0, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-07 22:24:41] ApplyFilter - Display: 0, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-07 22:24:41] ApplyFilter - Display: 2, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-07 22:24:42] ApplyFilter - Display: 39, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-07 22:24:42] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-07 22:25:32] ERROR: DataGridClientes es NULL en ApplyFilter
+[2026-01-07 22:25:32] Loaded 67 clients from database
+[2026-01-07 22:25:32] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-07 22:25:32] DataGrid loaded - ItemsSource count: 67, DataGrid visible: True
+[2026-01-07 22:25:32] DIAGNÓSTICO DataGrid:
+  Clientes en colección: 67
+  ItemsSource asignado: True
+  ItemsSource count: 67
+  DataGrid visible: True
+  DataGrid IsLoaded: True
+  DataGrid Height: NaN
+  DataGrid Width: NaN
+[2026-01-07 22:28:46] ERROR: DataGridClientes es NULL en ApplyFilter
+[2026-01-07 22:28:47] Loaded 67 clients from database
+[2026-01-07 22:28:47] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-07 22:28:47] DataGrid loaded - ItemsSource count: 67, DataGrid visible: True
+[2026-01-07 22:28:47] DIAGNÓSTICO DataGrid (después de Border):
+  Clientes en colección: 67
+  ItemsSource asignado: True
+  ItemsSource count: 67
+  DataGrid visible: True
+  DataGrid IsLoaded: True
+  DataGrid Height: NaN
+  DataGrid Width: NaN
+  DataGrid Bounds: 1, 1, 1350, 638
+[2026-01-07 22:30:29] ERROR: DataGridClientes es NULL en ApplyFilter
+[2026-01-07 22:30:29] Loaded 67 clients from database
+[2026-01-07 22:30:29] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-07 22:30:29] DataGrid loaded - ItemsSource count: 67, DataGrid visible: True
+[2026-01-07 22:30:29] DIAGNÓSTICO DataGrid (después de Border):
+  Clientes en colección: 67
+  ItemsSource asignado: True
+  ItemsSource count: 67
+  DataGrid visible: True
+  DataGrid IsLoaded: True
+  DataGrid Height: NaN
+  DataGrid Width: NaN
+  DataGrid Bounds: 1, 1, 1350, 638
+[2026-01-07 22:32:30] ERROR: DataGridClientes es NULL en ApplyFilter
+[2026-01-07 22:32:30] Loaded 67 clients from database
+[2026-01-07 22:32:30] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-07 22:32:30] DataGrid loaded - ItemsSource count: 67, DataGrid visible: True
+[2026-01-07 22:32:30] DIAGNÓSTICO DataGrid (después de Border):
+  Clientes en colección: 67
+  ItemsSource asignado: True
+  ItemsSource count: 67
+  DataGrid visible: True
+  DataGrid IsLoaded: True
+  DataGrid Height: NaN
+  DataGrid Width: NaN
+  DataGrid Bounds: 1, 1, 1350, 638
+[2026-01-08 10:27:36] ERROR: DataGridClientes es NULL en ApplyFilter
+[2026-01-08 10:27:36] Loaded 67 clients from database
+[2026-01-08 10:27:36] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-08 10:27:36] DataGrid loaded - ItemsSource count: 67, DataGrid visible: True
+[2026-01-08 10:27:36] DIAGNÓSTICO DataGrid (después de Border):
+  Clientes en colección: 67
+  ItemsSource asignado: True
+  ItemsSource count: 67
+  DataGrid visible: True
+  DataGrid IsLoaded: True
+  DataGrid Height: NaN
+  DataGrid Width: NaN
+  DataGrid Bounds: 1, 1, 1350, 638
+[2026-01-08 10:30:19] ERROR: DataGridClientes es NULL en ApplyFilter
+[2026-01-08 10:30:19] Loaded 67 clients from database
+[2026-01-08 10:30:19] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-08 10:30:19] DataGrid loaded - ItemsSource count: 67, DataGrid visible: True
+[2026-01-08 10:30:19] DIAGNÓSTICO DataGrid (después de Border):
+  Clientes en colección: 67
+  ItemsSource asignado: True
+  ItemsSource count: 67
+  DataGrid visible: True
+  DataGrid IsLoaded: True
+  DataGrid Height: NaN
+  DataGrid Width: NaN
+  DataGrid Bounds: 1, 1, 1350, 638
+[2026-01-08 10:30:22] Loaded 67 clients from database
+[2026-01-08 10:30:22] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-08 10:30:22] Loaded 67 clients from database
+[2026-01-08 10:30:22] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-08 10:30:22] Loaded 67 clients from database
+[2026-01-08 10:30:22] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-08 10:30:23] Loaded 67 clients from database
+[2026-01-08 10:30:23] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-08 10:30:23] Loaded 67 clients from database
+[2026-01-08 10:30:23] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-08 10:30:23] Loaded 67 clients from database
+[2026-01-08 10:30:23] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-08 10:30:23] Loaded 67 clients from database
+[2026-01-08 10:30:23] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-08 10:30:23] Loaded 67 clients from database
+[2026-01-08 10:30:23] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-08 10:31:47] ERROR: DataGridClientes es NULL en ApplyFilter
+[2026-01-08 10:31:47] Loaded 67 clients from database
+[2026-01-08 10:31:47] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-08 10:31:47] DataGrid loaded - ItemsSource count: 67, DataGrid visible: True
+[2026-01-08 10:31:47] DIAGNÓSTICO DataGrid (después de Border):
+  Clientes en colección: 67
+  ItemsSource asignado: True
+  ItemsSource count: 67
+  DataGrid visible: True
+  DataGrid IsLoaded: True
+  DataGrid Height: NaN
+  DataGrid Width: NaN
+  DataGrid Bounds: 1, 1, 1350, 638
+[2026-01-08 10:31:53] Loaded 67 clients from database
+[2026-01-08 10:31:53] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-08 10:31:53] Loaded 67 clients from database
+[2026-01-08 10:31:53] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-08 10:31:59] ERROR: DataGridClientes es NULL en ApplyFilter
+[2026-01-08 10:31:59] Loaded 67 clients from database
+[2026-01-08 10:31:59] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-08 10:31:59] DataGrid loaded - ItemsSource count: 67, DataGrid visible: True
+[2026-01-08 10:31:59] DIAGNÓSTICO DataGrid (después de Border):
+  Clientes en colección: 67
+  ItemsSource asignado: True
+  ItemsSource count: 67
+  DataGrid visible: True
+  DataGrid IsLoaded: True
+  DataGrid Height: NaN
+  DataGrid Width: NaN
+  DataGrid Bounds: 1, 1, 1350, 638
+[2026-01-08 10:32:02] ERROR: DataGridClientes es NULL en ApplyFilter
+[2026-01-08 10:32:02] Loaded 67 clients from database
+[2026-01-08 10:32:02] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-08 10:32:02] DataGrid loaded - ItemsSource count: 67, DataGrid visible: True
+[2026-01-08 10:32:02] DIAGNÓSTICO DataGrid (después de Border):
+  Clientes en colección: 67
+  ItemsSource asignado: True
+  ItemsSource count: 67
+  DataGrid visible: True
+  DataGrid IsLoaded: True
+  DataGrid Height: NaN
+  DataGrid Width: NaN
+  DataGrid Bounds: 1, 1, 1350, 638
+[2026-01-08 10:32:04] ERROR: DataGridClientes es NULL en ApplyFilter
+[2026-01-08 10:32:04] Loaded 67 clients from database
+[2026-01-08 10:32:04] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-08 10:32:04] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-08 10:32:04] DataGrid loaded - ItemsSource count: 67, DataGrid visible: True
+[2026-01-08 10:32:04] DIAGNÓSTICO DataGrid (después de Border):
+  Clientes en colección: 67
+  ItemsSource asignado: True
+  ItemsSource count: 67
+  DataGrid visible: True
+  DataGrid IsLoaded: True
+  DataGrid Height: NaN
+  DataGrid Width: NaN
+  DataGrid Bounds: 1, 1, 1350, 638
+[2026-01-08 10:32:06] ERROR: DataGridClientes es NULL en ApplyFilter
+[2026-01-08 10:32:06] Loaded 67 clients from database
+[2026-01-08 10:32:06] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-08 10:32:06] ApplyFilter - Display: 0, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-08 10:32:06] DataGrid loaded - ItemsSource count: 0, DataGrid visible: True
+[2026-01-08 10:35:14] ERROR: DataGridClientes es NULL en ApplyFilter
+[2026-01-08 10:35:14] Loaded 67 clients from database
+[2026-01-08 10:35:14] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-08 10:35:15] DataGrid loaded - ItemsSource count: 67, DataGrid visible: True
+[2026-01-08 10:35:15] DIAGNÓSTICO DataGrid (después de Border):
+  Clientes en colección: 67
+  ItemsSource asignado: True
+  ItemsSource count: 67
+  DataGrid visible: True
+  DataGrid IsLoaded: True
+  DataGrid Height: NaN
+  DataGrid Width: NaN
+  DataGrid Bounds: 1, 1, 1350, 638
+[2026-01-08 10:35:25] Loaded 67 clients from database
+[2026-01-08 10:35:25] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-08 10:35:25] Loaded 67 clients from database
+[2026-01-08 10:35:25] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-08 10:35:26] Loaded 67 clients from database
+[2026-01-08 10:35:26] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-08 10:35:26] Loaded 67 clients from database
+[2026-01-08 10:35:26] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-08 10:35:26] Loaded 67 clients from database
+[2026-01-08 10:35:26] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-08 10:35:26] Loaded 67 clients from database
+[2026-01-08 10:35:26] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-08 10:35:26] Loaded 67 clients from database
+[2026-01-08 10:35:26] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-08 10:35:26] Loaded 67 clients from database
+[2026-01-08 10:35:26] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-08 10:35:26] Loaded 67 clients from database
+[2026-01-08 10:35:26] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-08 10:35:27] Loaded 67 clients from database
+[2026-01-08 10:35:27] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-08 10:35:27] Loaded 67 clients from database
+[2026-01-08 10:35:27] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-08 10:35:27] Loaded 67 clients from database
+[2026-01-08 10:35:27] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-08 10:35:27] Loaded 67 clients from database
+[2026-01-08 10:35:27] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-08 10:35:28] Loaded 67 clients from database
+[2026-01-08 10:35:28] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-08 10:35:31] Loaded 67 clients from database
+[2026-01-08 10:35:31] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-08 10:35:32] Loaded 67 clients from database
+[2026-01-08 10:35:32] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-08 10:35:35] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-08 10:35:36] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-08 10:35:46] ERROR: DataGridClientes es NULL en ApplyFilter
+[2026-01-08 10:35:46] Loaded 67 clients from database
+[2026-01-08 10:35:46] ApplyFilter - Display: 67, Total: 67, DataGrid ItemsSource: ASIGNADO
+[2026-01-08 10:35:46] DataGrid loaded - ItemsSource count: 67, DataGrid visible: True
+[2026-01-08 10:35:46] DIAGNÓSTICO DataGrid (después de Border):
+  Clientes en colección: 67
+  ItemsSource asignado: True
+  ItemsSource count: 67
+  DataGrid visible: True
+  DataGrid IsLoaded: True
+  DataGrid Height: NaN
+  DataGrid Width: NaN
+  DataGrid Bounds: 1, 1, 1350, 638
+[2026-01-08 10:38:59] DataGrid loaded - ItemsSource count: 67, DataGrid visible: True
+[2026-01-08 10:38:59] DIAGNÓSTICO DataGrid (después de Border):
+  Clientes en colección: 67
+  ItemsSource asignado: True
+  ItemsSource count: 67
+  DataGrid visible: True
+  DataGrid IsLoaded: True
+  DataGrid Height: NaN
+  DataGrid Width: NaN
+  DataGrid Bounds: 1, 1, 1350, 638
+[2026-01-08 10:41:29] DataGrid loaded - ItemsSource count: 67, DataGrid visible: True
+[2026-01-08 10:41:29] DIAGNÓSTICO DataGrid (después de Border):
+  Clientes en colección: 67
+  ItemsSource asignado: True
+  ItemsSource count: 67
+  DataGrid visible: True
+  DataGrid IsLoaded: True
+  DataGrid Height: NaN
+  DataGrid Width: NaN
+  DataGrid Bounds: 1, 1, 1350, 638
+[2026-01-08 10:42:55] DataGrid loaded - ItemsSource count: 67, DataGrid visible: True
+[2026-01-08 10:42:55] DIAGNÓSTICO DataGrid (después de Border):
+  Clientes en colección: 67
+  ItemsSource asignado: True
+  ItemsSource count: 67
+  DataGrid visible: True
+  DataGrid IsLoaded: True
+  DataGrid Height: NaN
+  DataGrid Width: NaN
+  DataGrid Bounds: 1, 1, 1350, 638
+[2026-01-08 10:46:28] DataGrid loaded - ItemsSource count: 67, DataGrid visible: True
+[2026-01-08 10:46:28] DIAGNÓSTICO DataGrid (después de Border):
+  Clientes en colección: 67
+  ItemsSource asignado: True
+  ItemsSource count: 67
+  DataGrid visible: True
+  DataGrid IsLoaded: True
+  DataGrid Height: NaN
+  DataGrid Width: NaN
+  DataGrid Bounds: 1, 1, 1350, 638
+[2026-01-08 10:48:27] DataGrid loaded - ItemsSource count: 67, DataGrid visible: True
+[2026-01-08 10:48:27] DIAGNÓSTICO DataGrid (después de Border):
+  Clientes en colección: 67
+  ItemsSource asignado: True
+  ItemsSource count: 67
+  DataGrid visible: True
+  DataGrid IsLoaded: True
+  DataGrid Height: NaN
+  DataGrid Width: NaN
+  DataGrid Bounds: 1, 1, 1350, 638
+[2026-01-08 10:48:40] DataGrid loaded - ItemsSource count: 67, DataGrid visible: True
+[2026-01-08 10:48:40] DIAGNÓSTICO DataGrid (después de Border):
+  Clientes en colección: 67
+  ItemsSource asignado: True
+  ItemsSource count: 67
+  DataGrid visible: True
+  DataGrid IsLoaded: True
+  DataGrid Height: NaN
+  DataGrid Width: NaN
+  DataGrid Bounds: 1, 1, 1350, 638
+[2026-01-08 11:16:00] DataGrid loaded - ItemsSource count: 67, DataGrid visible: True
+[2026-01-08 11:16:00] DIAGNÓSTICO DataGrid (después de Border):
+  Clientes en colección: 67
+  ItemsSource asignado: True
+  ItemsSource count: 67
+  DataGrid visible: True
+  DataGrid IsLoaded: True
+  DataGrid Height: NaN
+  DataGrid Width: NaN
+  DataGrid Bounds: 1, 1, 1350, 638
+[2026-01-08 11:19:49] DataGrid loaded - ItemsSource count: 67, DataGrid visible: True
+[2026-01-08 11:19:49] DIAGNÓSTICO DataGrid (después de Border):
+  Clientes en colección: 67
+  ItemsSource asignado: True
+  ItemsSource count: 67
+  DataGrid visible: True
+  DataGrid IsLoaded: True
+  DataGrid Height: NaN
+  DataGrid Width: NaN
+  DataGrid Bounds: 1, 1, 1350, 638
+[2026-01-08 11:48:03] DataGrid loaded - ItemsSource count: 67, DataGrid visible: True
+[2026-01-08 11:48:03] DIAGNÓSTICO DataGrid (después de Border):
+  Clientes en colección: 67
+  ItemsSource asignado: True
+  ItemsSource count: 67
+  DataGrid visible: True
+  DataGrid IsLoaded: True
+  DataGrid Height: NaN
+  DataGrid Width: NaN
+  DataGrid Bounds: 1, 1, 1350, 638
+[2026-01-08 15:04:19] DataGrid loaded - ItemsSource count: 67, DataGrid visible: True
+[2026-01-08 15:04:19] DIAGNÓSTICO DataGrid (después de Border):
+  Clientes en colección: 67
+  ItemsSource asignado: True
+  ItemsSource count: 67
+  DataGrid visible: True
+  DataGrid IsLoaded: True
+  DataGrid Height: NaN
+  DataGrid Width: NaN
+  DataGrid Bounds: 1, 1, 1350, 638
+[2026-01-08 15:37:33] DataGrid loaded - ItemsSource count: 67, DataGrid visible: True
+[2026-01-08 15:37:33] DIAGNÓSTICO DataGrid (después de Border):
+  Clientes en colección: 67
+  ItemsSource asignado: True
+  ItemsSource count: 67
+  DataGrid visible: True
+  DataGrid IsLoaded: True
+  DataGrid Height: NaN
+  DataGrid Width: NaN
+  DataGrid Bounds: 1, 1, 1350, 638
+[2026-01-08 15:47:44] DataGrid loaded - ItemsSource count: 67, DataGrid visible: True
+[2026-01-08 15:47:44] DIAGNÓSTICO DataGrid (después de Border):
+  Clientes en colección: 67
+  ItemsSource asignado: True
+  ItemsSource count: 67
+  DataGrid visible: True
+  DataGrid IsLoaded: True
+  DataGrid Height: NaN
+  DataGrid Width: NaN
+  DataGrid Bounds: 1, 1, 1350, 638
+[2026-01-08 15:55:31] DataGrid loaded - ItemsSource count: 67, DataGrid visible: True
+[2026-01-08 15:55:31] DIAGNÓSTICO DataGrid (después de Border):
+  Clientes en colección: 67
+  ItemsSource asignado: True
+  ItemsSource count: 67
+  DataGrid visible: True
+  DataGrid IsLoaded: True
+  DataGrid Height: NaN
+  DataGrid Width: NaN
+  DataGrid Bounds: 1, 1, 1350, 638
+[2026-01-08 16:04:11] DataGrid loaded - ItemsSource count: 67, DataGrid visible: True
+[2026-01-08 16:04:11] DIAGNÓSTICO DataGrid (después de Border):
+  Clientes en colección: 67
+  ItemsSource asignado: True
+  ItemsSource count: 67
+  DataGrid visible: True
+  DataGrid IsLoaded: True
+  DataGrid Height: NaN
+  DataGrid Width: NaN
+  DataGrid Bounds: 1, 1, 1350, 590
+[2026-01-08 16:06:56] DataGrid loaded - ItemsSource count: 67, DataGrid visible: True
+[2026-01-08 16:06:56] DIAGNÓSTICO DataGrid (después de Border):
+  Clientes en colección: 67
+  ItemsSource asignado: True
+  ItemsSource count: 67
+  DataGrid visible: True
+  DataGrid IsLoaded: True
+  DataGrid Height: NaN
+  DataGrid Width: NaN
+  DataGrid Bounds: 1, 1, 1350, 590
+[2026-01-09 10:48:15] DataGrid loaded - ItemsSource count: 67, DataGrid visible: True
+[2026-01-09 10:48:15] DIAGNÓSTICO DataGrid (después de Border):
+  Clientes en colección: 67
+  ItemsSource asignado: True
+  ItemsSource count: 67
+  DataGrid visible: True
+  DataGrid IsLoaded: True
+  DataGrid Height: NaN
+  DataGrid Width: NaN
+  DataGrid Bounds: 1, 1, 1350, 590
+[2026-01-09 10:48:52] DataGrid loaded - ItemsSource count: 67, DataGrid visible: True
+[2026-01-09 10:48:52] DIAGNÓSTICO DataGrid (después de Border):
+  Clientes en colección: 67
+  ItemsSource asignado: True
+  ItemsSource count: 67
+  DataGrid visible: True
+  DataGrid IsLoaded: True
+  DataGrid Height: NaN
+  DataGrid Width: NaN
+  DataGrid Bounds: 1, 1, 1350, 590
+[2026-01-09 10:51:41] DataGrid loaded - ItemsSource count: 67, DataGrid visible: True
+[2026-01-09 10:51:41] DIAGNÓSTICO DataGrid (después de Border):
+  Clientes en colección: 67
+  ItemsSource asignado: True
+  ItemsSource count: 67
+  DataGrid visible: True
+  DataGrid IsLoaded: True
+  DataGrid Height: NaN
+  DataGrid Width: NaN
+  DataGrid Bounds: 1, 1, 1350, 590
+[2026-01-09 11:23:16] DataGrid loaded - ItemsSource count: 1, DataGrid visible: True
+[2026-01-09 11:23:16] DIAGNÓSTICO DataGrid (después de Border):
+  Clientes en colección: 1
+  ItemsSource asignado: True
+  ItemsSource count: 1
+  DataGrid visible: True
+  DataGrid IsLoaded: True
+  DataGrid Height: NaN
+  DataGrid Width: NaN
+  DataGrid Bounds: 1, 1, 1350, 590
+[2026-01-09 11:23:50] DataGrid loaded - ItemsSource count: 67, DataGrid visible: True
+[2026-01-09 11:23:50] DIAGNÓSTICO DataGrid (después de Border):
+  Clientes en colección: 67
+  ItemsSource asignado: True
+  ItemsSource count: 67
+  DataGrid visible: True
+  DataGrid IsLoaded: True
+  DataGrid Height: NaN
+  DataGrid Width: NaN
+  DataGrid Bounds: 1, 1, 1350, 590
+[2026-01-09 11:38:29] DataGrid loaded - ItemsSource count: 67, DataGrid visible: True
+[2026-01-09 11:38:29] DIAGNÓSTICO DataGrid (después de Border):
+  Clientes en colección: 67
+  ItemsSource asignado: True
+  ItemsSource count: 67
+  DataGrid visible: True
+  DataGrid IsLoaded: True
+  DataGrid Height: NaN
+  DataGrid Width: NaN
+  DataGrid Bounds: 1, 1, 1350, 590
+[2026-01-09 11:46:04] DataGrid loaded - ItemsSource count: 67, DataGrid visible: True
+[2026-01-09 11:46:04] DIAGNÓSTICO DataGrid (después de Border):
+  Clientes en colección: 67
+  ItemsSource asignado: True
+  ItemsSource count: 67
+  DataGrid visible: True
+  DataGrid IsLoaded: True
+  DataGrid Height: NaN
+  DataGrid Width: NaN
+  DataGrid Bounds: 1, 1, 1350, 590
+[2026-01-09 12:18:18] DataGrid loaded - ItemsSource count: 28, DataGrid visible: True
+[2026-01-09 12:18:18] DIAGNÓSTICO DataGrid (después de Border):
+  Clientes en colección: 28
+  ItemsSource asignado: True
+  ItemsSource count: 28
+  DataGrid visible: True
+  DataGrid IsLoaded: True
+  DataGrid Height: NaN
+  DataGrid Width: NaN
+  DataGrid Bounds: 1, 1, 1350, 590
