@@ -202,7 +202,7 @@ Vista detallada de métricas del negocio:
 
 - Total de clientes
 - Clientes activos
-- Clientas vencidos
+- Clientes vencidos
 - Ingresos del mes actual
 
 **Características:**
@@ -560,9 +560,5 @@ sistema_gestion_clientes_windows/
 ---
 
 **Versión:** 1.0  
-<<<<<<< Updated upstream
-**Última actualización:** 09-01-2026
-=======
-**Última actualización:** Enero 2026  
-**Licencia:** Ver archivo LICENSE (si aplica)
->>>>>>> Stashed changes
+**Última actualización:** 9 de enero de 2026  
+
