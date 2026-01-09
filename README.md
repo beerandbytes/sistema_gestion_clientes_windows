@@ -396,4 +396,4 @@ Para problemas o consultas, revisar:
 ---
 
 **Versión:** 1.0  
-**Última actualización:** 2024
+**Última actualización:** 09-01-2026
